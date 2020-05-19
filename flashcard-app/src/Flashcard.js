@@ -10,8 +10,12 @@ export default function Flashcard({ flashcard }) {
             <div className="front">
                 {flashcard.question}
                 <div className="flashcard-options">
-                    {flashcard.mc.map((option) => {
-                        return <div className="flashcard-option">{option}</div>;
+                    {flashcard.options.map((option) => {
+                        return (
+                            <div className="flashcard-option" key={option}>
+                                {option}
+                            </div>
+                        );
                     })}
                 </div>
             </div>
