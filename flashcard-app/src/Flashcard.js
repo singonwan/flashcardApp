@@ -27,7 +27,7 @@ export default function Flashcard({ flashcard }) {
         <div
             className={`card ${flip ? 'flip' : ''}`}
             style={{ height: height }}
-            onClick={() => setFlip(!flip, console.log(flip))}
+            onClick={() => setFlip(!flip)}
         >
             <div className="front" ref={frontEl}>
                 {flashcard.question}
